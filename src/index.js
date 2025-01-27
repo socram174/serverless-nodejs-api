@@ -30,7 +30,7 @@ app.get("/hello", (req, res, next) => {
 });
 
 app.get("/leads", async (req, res, next) => {
-  const results = await crud.getLead(4);
+  const results = await crud.listLeads();
   return res.status(200).json({
     results: results
   });
